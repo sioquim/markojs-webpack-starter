@@ -13,9 +13,10 @@
     "copy-webpack-plugin": "^4.0.1"
   },
   "scripts": {
-    "start": "npm run heroku-build && node server.js",
+    "start": "node server.js",
     "start-dev": "webpack-dev-server --inline --hot",
     "build": "webpack",
+    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress",    
     "heroku-build": "./node_modules/webpack/bin/webpack.js -p  --config ./webpack.prod.config.js --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
