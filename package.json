@@ -4,14 +4,15 @@
   "description": "Starter app using MarkoJS and Webpack",
   "main": "webpack.config.js",
   "dependencies": {
-    "marko": "^4.4.28",
-    "webpack": "^3.6.0"
+    "marko": "^4.4.28"
   },
   "devDependencies": {
     "css-loader": "^0.28.7",
     "marko-loader": "^1.3.1",
     "style-loader": "^0.18.2",
-    "webpack-dev-server": "^2.8.2"
+    "webpack-dev-server": "^2.8.2",
+    "webpack": "^3.6.0",
+    "copy-webpack-plugin": "^4.0.1"
   },
   "scripts": {
     "start": "npm run heroku-build && node server.js",

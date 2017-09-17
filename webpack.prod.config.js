@@ -1,9 +1,18 @@
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+
 module.exports = {
     entry: "./src/client.js",
     output: {
-        path: __dirname,
-        filename: "public/static/bundle.js"
+        path: __dirname + "/public",
+        filename: "static/bundle.js"
     },
+    plugins: [
+      new CopyWebpackPlugin([
+        { 
+            from: './src/index.html'
+        }
+      ]),
+    ],
     resolve: {
         extensions: ['.js', '.marko']
     },
