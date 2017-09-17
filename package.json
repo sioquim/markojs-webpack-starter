@@ -1,7 +1,7 @@
 {
-  "name": "marko-webpack",
+  "name": "markojs-webpack-starter",
   "version": "1.0.0",
-  "description": "Starter app using MarkoJS and Webpack3",
+  "description": "Starter app using MarkoJS and Webpack",
   "main": "webpack.config.js",
   "dependencies": {
     "marko": "^4.4.28"
@@ -14,8 +14,10 @@
     "webpack-dev-server": "^2.8.2"
   },
   "scripts": {
-    "start": "webpack-dev-server --inline --hot",
+    "start": "npm run heroku-build && node server.js",
+    "start-dev": "webpack-dev-server --inline --hot",
     "build": "webpack",
+    "heroku-build": "./node_modules/webpack/bin/webpack.js -p  --config ./webpack.prod.config.js --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
